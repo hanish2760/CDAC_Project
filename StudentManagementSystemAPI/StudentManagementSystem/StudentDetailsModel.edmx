@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="StudentManagementSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="StudentDetails">
+          <Key>
+            <PropertyRef Name="Userid" />
+          </Key>
+          <Property Name="Userid" Type="int" Nullable="false" />
+          <Property Name="UPassword" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Sname" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Phno" Type="varchar" MaxLength="10" />
+          <Property Name="SAddress" Type="varchar(max)" />
+          <Property Name="Mailid" Type="varchar(max)" />
+          <Property Name="FatherName" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="FatherDesignation" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="FatherPhNum" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="MotherName" Type="varchar" MaxLength="25" />
+          <Property Name="MotherDesignation" Type="varchar" MaxLength="25" />
+          <Property Name="MotherPhNum" Type="varchar" MaxLength="10" />
+          <Property Name="Dob" Type="date" />
+          <Property Name="BloodGrp" Type="varchar" MaxLength="5" />
+          <Property Name="DateOfJoining" Type="date" />
+          <Property Name="Domain" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Syear" Type="int" Nullable="false" />
+          <Property Name="Roll_Number" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="StudentManagementSystemModelStoreContainer">
+          <EntitySet Name="StudentDetails" EntityType="Self.StudentDetails" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="StudentManagementSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="StudentDetail">
+          <Key>
+            <PropertyRef Name="Userid" />
+          </Key>
+          <Property Name="Userid" Type="Int32" Nullable="false" />
+          <Property Name="UPassword" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Sname" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Phno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="SAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Mailid" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FatherName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FatherDesignation" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FatherPhNum" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MotherName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="MotherDesignation" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="MotherPhNum" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Dob" Type="DateTime" Precision="0" />
+          <Property Name="BloodGrp" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="DateOfJoining" Type="DateTime" Precision="0" />
+          <Property Name="Domain" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Syear" Type="Int32" Nullable="false" />
+          <Property Name="Roll_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="StudentManagementSystemEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="StudentDetails" EntityType="Self.StudentDetail" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="StudentManagementSystemModelStoreContainer" CdmEntityContainer="StudentManagementSystemEntities">
+          <EntitySetMapping Name="StudentDetails">
+            <EntityTypeMapping TypeName="StudentManagementSystemModel.StudentDetail">
+              <MappingFragment StoreEntitySet="StudentDetails">
+                <ScalarProperty Name="Userid" ColumnName="Userid" />
+                <ScalarProperty Name="UPassword" ColumnName="UPassword" />
+                <ScalarProperty Name="Sname" ColumnName="Sname" />
+                <ScalarProperty Name="Phno" ColumnName="Phno" />
+                <ScalarProperty Name="SAddress" ColumnName="SAddress" />
+                <ScalarProperty Name="Mailid" ColumnName="Mailid" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="FatherDesignation" ColumnName="FatherDesignation" />
+                <ScalarProperty Name="FatherPhNum" ColumnName="FatherPhNum" />
+                <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+                <ScalarProperty Name="MotherDesignation" ColumnName="MotherDesignation" />
+                <ScalarProperty Name="MotherPhNum" ColumnName="MotherPhNum" />
+                <ScalarProperty Name="Dob" ColumnName="Dob" />
+                <ScalarProperty Name="BloodGrp" ColumnName="BloodGrp" />
+                <ScalarProperty Name="DateOfJoining" ColumnName="DateOfJoining" />
+                <ScalarProperty Name="Domain" ColumnName="Domain" />
+                <ScalarProperty Name="Syear" ColumnName="Syear" />
+                <ScalarProperty Name="Roll_Number" ColumnName="Roll_Number" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

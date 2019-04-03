@@ -1,0 +1,162 @@
+﻿@model StudentManagementSystem_Client.Models.StudentDetail
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>StudentDetail</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Sname)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Sname)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Roll_Number)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Roll_Number)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Domain)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Domain)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Syear)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Syear)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Mailid)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Mailid)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.UPassword)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.UPassword)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Phno)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Phno)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Dob)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Dob)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.FatherName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.FatherName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.FatherDesignation)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.FatherDesignation)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.FatherPhNum)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.FatherPhNum)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MotherName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MotherName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MotherDesignation)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MotherDesignation)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MotherPhNum)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MotherPhNum)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.SAddress)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.SAddress)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.BloodGrp)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.BloodGrp)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DateOfJoining)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DateOfJoining)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

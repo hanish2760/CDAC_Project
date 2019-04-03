@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StudentManagementSystemModelStoreContainer" CdmEntityContainer="StudentManagementSystemEntities">
+    <EntitySetMapping Name="StudentDetails">
+      <EntityTypeMapping TypeName="StudentManagementSystemModel.StudentDetail">
+        <MappingFragment StoreEntitySet="StudentDetails">
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="UPassword" ColumnName="UPassword" />
+          <ScalarProperty Name="Sname" ColumnName="Sname" />
+          <ScalarProperty Name="Phno" ColumnName="Phno" />
+          <ScalarProperty Name="SAddress" ColumnName="SAddress" />
+          <ScalarProperty Name="Mailid" ColumnName="Mailid" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="FatherDesignation" ColumnName="FatherDesignation" />
+          <ScalarProperty Name="FatherPhNum" ColumnName="FatherPhNum" />
+          <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+          <ScalarProperty Name="MotherDesignation" ColumnName="MotherDesignation" />
+          <ScalarProperty Name="MotherPhNum" ColumnName="MotherPhNum" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="BloodGrp" ColumnName="BloodGrp" />
+          <ScalarProperty Name="DateOfJoining" ColumnName="DateOfJoining" />
+          <ScalarProperty Name="Domain" ColumnName="Domain" />
+          <ScalarProperty Name="Syear" ColumnName="Syear" />
+          <ScalarProperty Name="Roll_Number" ColumnName="Roll_Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
