@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StudentManagementSystemModel2StoreContainer" CdmEntityContainer="StudentManagementSystemEntities7">
+    <EntitySetMapping Name="Curriculum_Table">
+      <EntityTypeMapping TypeName="StudentManagementSystemModel2.Curriculum_Table">
+        <MappingFragment StoreEntitySet="Curriculum_Table">
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="Serial_No" ColumnName="Serial_No" />
+          <ScalarProperty Name="Subject1" ColumnName="Subject1" />
+          <ScalarProperty Name="Subject2" ColumnName="Subject2" />
+          <ScalarProperty Name="Subject3" ColumnName="Subject3" />
+          <ScalarProperty Name="Attendance" ColumnName="Attendance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

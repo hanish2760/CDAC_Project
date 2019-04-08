@@ -11,7 +11,9 @@ namespace StudentManagementSystem_Client.Controllers
         // GET: Login
         public ActionResult Index()
         {
-            
+            Session["role"] = "";
+            Session["user_id"] = "";
+            Session["mail_id"] = "";
             return View();
         }
 
@@ -20,7 +22,9 @@ namespace StudentManagementSystem_Client.Controllers
         {
             
             User model = new User();
-
+            Session["role"] = "";
+            Session["user_id"] = "";
+            Session["mail_id"] = "";
             return PartialView("LoginView", model);
         }
     }

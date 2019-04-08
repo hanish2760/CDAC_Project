@@ -1,0 +1,72 @@
+﻿@model IEnumerable<StudentManagementSystem_Client.Models.StudentDetailsForFaculty>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Sname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Roll_Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Domain)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Syear)
+            </th>
+            
+           
+            <th>
+                @Html.DisplayNameFor(model => model.Average)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Attendance)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Roll_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Domain)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Syear)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.Average)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Attendance)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditStudentMarks",  item ) |
+               
+               
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

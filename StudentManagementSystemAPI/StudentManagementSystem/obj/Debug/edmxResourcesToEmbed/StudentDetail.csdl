@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StudentManagementSystemModel3" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="StudentDetail">
+    <Key>
+      <PropertyRef Name="Userid" />
+    </Key>
+    <Property Name="Userid" Type="Int32" Nullable="false" />
+    <Property Name="UPassword" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sname" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Phno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Mailid" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FatherName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FatherDesignation" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FatherPhNum" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MotherName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="MotherDesignation" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="MotherPhNum" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Dob" Type="DateTime" Precision="0" />
+    <Property Name="BloodGrp" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="DateOfJoining" Type="DateTime" Precision="0" />
+    <Property Name="Domain" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Syear" Type="Int32" Nullable="false" />
+    <Property Name="Roll_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="StudentManagementSystemEntities8" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="StudentDetails" EntityType="Self.StudentDetail" />
+  </EntityContainer>
+</Schema>

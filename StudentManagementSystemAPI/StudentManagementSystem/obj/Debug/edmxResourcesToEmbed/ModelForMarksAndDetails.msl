@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StudentManagementSystemModel2StoreContainer" CdmEntityContainer="StudentManagementSystemEntities5">
+    <EntitySetMapping Name="Curriculum_Table">
+      <EntityTypeMapping TypeName="StudentManagementSystemModel2.Curriculum_Table">
+        <MappingFragment StoreEntitySet="Curriculum_Table">
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="Serial_No" ColumnName="Serial_No" />
+          <ScalarProperty Name="Subject1" ColumnName="Subject1" />
+          <ScalarProperty Name="Subject2" ColumnName="Subject2" />
+          <ScalarProperty Name="Subject3" ColumnName="Subject3" />
+          <ScalarProperty Name="Attendance" ColumnName="Attendance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentDetails">
+      <EntityTypeMapping TypeName="StudentManagementSystemModel2.StudentDetail">
+        <MappingFragment StoreEntitySet="StudentDetails">
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="UPassword" ColumnName="UPassword" />
+          <ScalarProperty Name="Sname" ColumnName="Sname" />
+          <ScalarProperty Name="Phno" ColumnName="Phno" />
+          <ScalarProperty Name="SAddress" ColumnName="SAddress" />
+          <ScalarProperty Name="Mailid" ColumnName="Mailid" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="FatherDesignation" ColumnName="FatherDesignation" />
+          <ScalarProperty Name="FatherPhNum" ColumnName="FatherPhNum" />
+          <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+          <ScalarProperty Name="MotherDesignation" ColumnName="MotherDesignation" />
+          <ScalarProperty Name="MotherPhNum" ColumnName="MotherPhNum" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="BloodGrp" ColumnName="BloodGrp" />
+          <ScalarProperty Name="DateOfJoining" ColumnName="DateOfJoining" />
+          <ScalarProperty Name="Domain" ColumnName="Domain" />
+          <ScalarProperty Name="Syear" ColumnName="Syear" />
+          <ScalarProperty Name="Roll_Number" ColumnName="Roll_Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="getDetailsAndMarks" FunctionName="StudentManagementSystemModel2.Store.getDetailsAndMarks">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StudentManagementSystemModel2.getDetailsAndMarks_Result">
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="UPassword" ColumnName="UPassword" />
+          <ScalarProperty Name="Sname" ColumnName="Sname" />
+          <ScalarProperty Name="Phno" ColumnName="Phno" />
+          <ScalarProperty Name="SAddress" ColumnName="SAddress" />
+          <ScalarProperty Name="Mailid" ColumnName="Mailid" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="FatherDesignation" ColumnName="FatherDesignation" />
+          <ScalarProperty Name="FatherPhNum" ColumnName="FatherPhNum" />
+          <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+          <ScalarProperty Name="MotherDesignation" ColumnName="MotherDesignation" />
+          <ScalarProperty Name="MotherPhNum" ColumnName="MotherPhNum" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="BloodGrp" ColumnName="BloodGrp" />
+          <ScalarProperty Name="DateOfJoining" ColumnName="DateOfJoining" />
+          <ScalarProperty Name="Domain" ColumnName="Domain" />
+          <ScalarProperty Name="Syear" ColumnName="Syear" />
+          <ScalarProperty Name="Roll_Number" ColumnName="Roll_Number" />
+          <ScalarProperty Name="Userid1" ColumnName="Userid1" />
+          <ScalarProperty Name="Serial_No" ColumnName="Serial_No" />
+          <ScalarProperty Name="Subject1" ColumnName="Subject1" />
+          <ScalarProperty Name="Subject2" ColumnName="Subject2" />
+          <ScalarProperty Name="Subject3" ColumnName="Subject3" />
+          <ScalarProperty Name="Attendance" ColumnName="Attendance" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

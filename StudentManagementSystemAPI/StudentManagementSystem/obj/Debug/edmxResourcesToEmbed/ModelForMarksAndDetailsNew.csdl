@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StudentManagementSystemModel3" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="StudentManagementSystemEntities6" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="getDetailsAndMarks" ReturnType="Collection(StudentManagementSystemModel3.getDetailsAndMarks_Result)" />
+  </EntityContainer>
+  <ComplexType Name="getDetailsAndMarks_Result">
+    <Property Type="Int32" Name="Userid" Nullable="false" />
+    <Property Type="String" Name="UPassword" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="Sname" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="Phno" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="SAddress" Nullable="true" />
+    <Property Type="String" Name="Mailid" Nullable="true" />
+    <Property Type="String" Name="FatherName" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="FatherDesignation" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="FatherPhNum" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="MotherName" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="MotherDesignation" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="MotherPhNum" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="Dob" Nullable="true" />
+    <Property Type="String" Name="BloodGrp" Nullable="true" MaxLength="5" />
+    <Property Type="DateTime" Name="DateOfJoining" Nullable="true" />
+    <Property Type="String" Name="Domain" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="Syear" Nullable="false" />
+    <Property Type="String" Name="Roll_Number" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Userid1" Nullable="false" />
+    <Property Type="Int32" Name="Serial_No" Nullable="false" />
+    <Property Type="Int32" Name="Subject1" Nullable="true" />
+    <Property Type="Int32" Name="Subject2" Nullable="true" />
+    <Property Type="Int32" Name="Subject3" Nullable="true" />
+    <Property Type="Double" Name="Attendance" Nullable="true" />
+  </ComplexType>
+</Schema>

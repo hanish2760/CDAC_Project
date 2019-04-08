@@ -24,6 +24,7 @@ namespace StudentManagementSystem_Client.Models
         public string SAddress { get; set; }
         public string BloodGrp { get; set; }
         public string DateOfJoining { get; set; }
+        public  int Userid { get; set; }
 
 
     }

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StudentManagementSystemModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Curriculum_Table">
+    <Key>
+      <PropertyRef Name="Userid" />
+    </Key>
+    <Property Name="Userid" Type="int" Nullable="false" />
+    <Property Name="Serial_No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Subject1" Type="int" />
+    <Property Name="Subject2" Type="int" />
+    <Property Name="Subject3" Type="int" />
+    <Property Name="Attendance" Type="float" />
+  </EntityType>
+  <EntityType Name="StudentDetails">
+    <Key>
+      <PropertyRef Name="Userid" />
+    </Key>
+    <Property Name="Userid" Type="int" Nullable="false" />
+    <Property Name="UPassword" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Sname" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Phno" Type="varchar" MaxLength="10" />
+    <Property Name="SAddress" Type="varchar(max)" />
+    <Property Name="Mailid" Type="varchar(max)" />
+    <Property Name="FatherName" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="FatherDesignation" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="FatherPhNum" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MotherName" Type="varchar" MaxLength="25" />
+    <Property Name="MotherDesignation" Type="varchar" MaxLength="25" />
+    <Property Name="MotherPhNum" Type="varchar" MaxLength="10" />
+    <Property Name="Dob" Type="date" />
+    <Property Name="BloodGrp" Type="varchar" MaxLength="5" />
+    <Property Name="DateOfJoining" Type="date" />
+    <Property Name="Domain" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Syear" Type="int" Nullable="false" />
+    <Property Name="Roll_Number" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Curriculu__User___60A75C0F">
+    <End Role="StudentDetails" Type="Self.StudentDetails" Multiplicity="1" />
+    <End Role="Curriculum_Table" Type="Self.Curriculum_Table" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="StudentDetails">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="Curriculum_Table">
+        <PropertyRef Name="Userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="getDetailsAndMarks" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="StudentManagementSystemModel2StoreContainer">
+    <EntitySet Name="Curriculum_Table" EntityType="Self.Curriculum_Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentDetails" EntityType="Self.StudentDetails" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Curriculu__User___60A75C0F" Association="Self.FK__Curriculu__User___60A75C0F">
+      <End Role="StudentDetails" EntitySet="StudentDetails" />
+      <End Role="Curriculum_Table" EntitySet="Curriculum_Table" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

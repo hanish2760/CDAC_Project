@@ -12,8 +12,13 @@ namespace StudentManagementSystem_Client.Controllers
  
 
         [HttpPost]
-        public string Login1(User l, JsonResult json)
+        public ActionResult Login1(User l, JsonResult json)
+
         {
+            //api / Curriculum_Table
+            Session["role"] ="";
+            Session["user_id"] = "";
+            Session["mail_id"] = "";
             string apiURI = "http://localhost:52738/api/Login";
             var client = new HttpClient();
             var values = new Dictionary<string, string>()
@@ -28,6 +33,7 @@ namespace StudentManagementSystem_Client.Controllers
             var response = client.PostAsync(apiURI, content);
             string op = "";
             User userNew;
+            // use try catch blocks to handle server errors...
             using (HttpContent cont = response.Result.Content)
             {
                 Task<string> res = cont.ReadAsStringAsync();
@@ -44,6 +50,8 @@ namespace StudentManagementSystem_Client.Controllers
             {
                 // session create .
                 Session["role"] = userNew.role;
+                Session["user_id"] = userNew.userid;
+                Session["mail_id"] = userNew.mail_id;
 
                 if (userNew.role == 1)
                 {
@@ -51,24 +59,30 @@ namespace StudentManagementSystem_Client.Controllers
 
                 }else if (userNew.role == 2)
                 {
+                    return RedirectToAction("Details", "Faculty");
                     // faculty
                 }
                 else if (userNew.role == 3)
                 {
                     //student
+                    // redirect to studentdetail controller to Detail action with id as parameter.
+                    //redirectToroute
+                    
+                     return RedirectToAction("Details", "StudentDetail",new { id = userNew.userid });
 
                 }
                 else
                 {
                     ModelState.AddModelError(string.Empty, "server error.plase contact adminstrator");
-                    return "failed";
+                    return View();
                 }
-                return "success";
+                return View();
             }
             else
             {
                 ModelState.AddModelError(string.Empty, "server error.plase contact adminstrator");
-                return "failed";
+                //
+                return View();
             }
 
 

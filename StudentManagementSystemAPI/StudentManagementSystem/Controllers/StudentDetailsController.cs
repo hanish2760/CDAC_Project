@@ -42,6 +42,7 @@ namespace StudentManagementSystem.Controllers
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
+
             }
 
             if (id != studentDetail.Userid)
@@ -67,8 +68,9 @@ namespace StudentManagementSystem.Controllers
                 }
             }
 
-            return StatusCode(HttpStatusCode.NoContent);
+            return StatusCode(HttpStatusCode.OK);
         }
+
 
         // POST: api/StudentDetails
         [ResponseType(typeof(StudentDetail))]
